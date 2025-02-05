@@ -1,1 +1,70 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seals are awesome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        nav {
+            background-color: #0077b6;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>seals are the best!!!</h1>
+    <nav>
+        <a href="#" onclick="showTab('fun-facts')">fun facts</a>
+        <a href="#" onclick="showTab('videos')">videos</a>
+        <a href="#" onclick="showTab('gallery')">gallery</a>
+    </nav>
+    
+    <div id="fun-facts" class="content active">
+        <h2>awesome seal facts!</h2>
+        <p>seals can hold their breath for up to two hours!!</p>
+        <p>they have super cool whiskers that help them detect fish underwater.</p>
+        <p>some seals can dive over 1500 meters deep!!!</p>
+    </div>
+    
+    <div id="videos" class="content">
+        <h2>check out these adorable seal videos!</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5Fvt8qQZOWw" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iFjeEaF-Vck" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div id="gallery" class="content">
+        <h2>seal photo gallery!</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Common_Seal_Phoca_vitulina.jpg" alt="cute seal" width="300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Leptonychotes_weddellii.jpg" alt="weddell seal" width="300">
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
